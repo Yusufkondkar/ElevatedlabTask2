@@ -42,5 +42,5 @@ Used Docker to containerize the app, ensuring consistent deployment across envir
 This task helped me understand how Jenkins automates the software lifecycle — from building and testing the app to deploying it in a reliable and repeatable way. I learned how to connect Jenkins with GitHub and Docker to build a basic but powerful DevOps workflow.
 
 
-Created by Yusuf Kondkar.
+Created by Yusuf Kondkar. 
 [GitHub](https://github.com/Yusufkondkar)
