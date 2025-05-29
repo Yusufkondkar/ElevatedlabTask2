@@ -1,46 +1,30 @@
-# Task 1: Node.js CI/CD Pipeline with Docker and GitHub Actions
-This project demonstrates a simple CI/CD pipeline that builds and pushes a Docker image of a Node.js app to Docker Hub on every push to the `main` branch.
-## Setup & Workflow
-- Dockerfile builds the Node.js app container
-- GitHub Actions workflow triggers on `main` branch push:
-  1. Checkout code
-  2. Setup Docker Buildx
-  3. Login to Docker Hub using secrets
-  4. Build and push Docker image
-## How to Use
-1. Create a Docker Hub repo named `nodejs-demo-app`
-2. Generate a Docker Hub access token
-3. Add GitHub Secrets `DOCKER_USERNAME` and `DOCKER_PASSWORD` (use token)
-4. Push code to `main` branch to trigger the pipeline
+# NodeJS Demo App
 
-## Dockerfile Details
+This project is a simple Node.js application created to practice and demonstrate Git version control and branching workflows.
 
-- Base image: node:20
-- Installs dependencies and runs `index.js`
-- Exposes port 3000
+## What We Did
 
----
-## 🚀 Task 2: Jenkins CI/CD Pipeline (Automated Build & Deployment)
-In this task, I set up a basic CI/CD pipeline using Jenkins for my Node.js application.
+- Initialized a Git repository and pushed the code to GitHub.
+- Created multiple branches:
+  - `main` — The production-ready code.
+  - `dev` — Development branch for testing new features.
+  - `feature/add-about-page` — Feature branch where we added a new "About" page route.
+- Made code changes on the feature branch (`feature/add-about-page`) by adding a new route.
+- Committed and pushed changes to the feature branch.
+- Created a Pull Request (PR) to merge the feature branch into the `dev` branch.
+- Reviewed and merged the feature branch into `dev`.
+- Tested and verified the `dev` branch.
+- Created a PR to merge `dev` into `main`.
+- Merged `dev` into `main` to release the updated code.
+- Deleted the feature branch after successful merge.
+- Used proper commit messages and Git best practices throughout the workflow.
 
-## ✅ What I Did:
-Installed Jenkins locally to manage pipeline jobs.
+## Project Structure
 
-Created a Jenkinsfile in the project repository with defined stages:
+- `index.js` — Main application file with routes for Home and About pages.
 
-Build: Installs project dependencies using npm install.
-
-Test: (Optional) Placeholder stage for running tests.
-
-Deploy: Builds and runs the app in a Docker container.
-
-Configured Jenkins to trigger the pipeline automatically whenever code is pushed to GitHub using Webhooks.
-
-Used Docker to containerize the app, ensuring consistent deployment across environments.
-
-## 🧠 Key Learning:
-This task helped me understand how Jenkins automates the software lifecycle — from building and testing the app to deploying it in a reliable and repeatable way. I learned how to connect Jenkins with GitHub and Docker to build a basic but powerful DevOps workflow.
-
+## Summary
+This project helped me understand how to use Git branches, make pull requests, and merge feature branches into development and main branches in a real-world workflow. It demonstrates the power of version control for collaborative software development.
 
 Created by Yusuf Kondkar. 
 [GitHub](https://github.com/Yusufkondkar)
