@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
   } else if (req.url === '/about') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end('About page: Node.js demo app example.\n');
+    res.end('About page: Node.js demo app example..\n');
   } else {
     res.statusCode = 404;
     res.end('Page not found\n');
