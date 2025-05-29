@@ -1,12 +1,21 @@
-// index.js
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 3000;
+const http = require('http');
+const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello from CI/CD pipeline Node.js App 🚀');
+const server = http.createServer((req, res) => {
+  if (req.url === '/') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello, World! This is my Node.js demo app.\n');
+  } else if (req.url === '/about') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('About page: Node.js demo app example..\n');
+  } else {
+    res.statusCode = 404;
+    res.end('Page not found\n');
+  }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+server.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
 });
